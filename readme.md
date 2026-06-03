@@ -28,6 +28,7 @@ Uso de Grid para organizar el contenido principal.
 ![mi captura](imagenes/captura%204.png)
 ![mi captura](imagenes/captura%205.png)
 ![mi captura](imagenes/captura%206.png)
+![mi captura](imagenes/captura%207.png)
 
 
 ## Autor
