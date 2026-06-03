@@ -22,7 +22,7 @@ Uso de Grid para organizar el contenido principal.
 
 ## Capturas del Proyecto
 
-![img()]
+![Mi captura](imagenes/captura%201.png)
 
 
 ## Autor
