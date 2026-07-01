@@ -33,3 +33,33 @@ botonConsejo.style.padding = "10px";
 botonConsejo.style.cursor = "pointer";
 
 formulario.appendChild(botonConsejo);
+
+// MENSAJE DE CONSEJOS //
+
+const mensaje = document.createElement("p");
+
+mensaje.style.marginTop = "15px";
+mensaje.style.fontWeight = "bold";
+mensaje.style.color = "green";
+
+formulario.appendChild(mensaje);
+
+function mostrarConsejo(){
+    const numero = Math.floor(Math.random() * consejos.length);
+    mensaje.textContent = consejos[numero];
+}
+
+botonConsejo.addEventListener("click", mostrarConsejo);
+
+
+// MENSAJE DE ESTADO //
+
+const estado = document.createElement("p");
+
+estado.style.fontWeight = "bold";
+estado.style.marginTop = "10px";
+
+formulario.appendChild(estado);
+estado.textContent = "Formulario enviado correctamente.";
+
+estado.style.color = "green";
