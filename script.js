@@ -63,3 +63,16 @@ formulario.appendChild(estado);
 estado.textContent = "Formulario enviado correctamente.";
 
 estado.style.color = "green";
+
+
+// CONTADOR DE CARACTERES //
+
+const contador = document.createElement("p");
+contador.textContent = "Caracteres: 0";
+comentario.parentNode.insertBefore(contador, comentario.nextSibling);
+
+function contarCaracteres(){
+    contador.textContent = "Caracteres: " + comentario.value.length;
+
+}
+comentario.addEventListener("input", contarCaracteres);
