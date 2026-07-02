@@ -191,3 +191,18 @@ inputs.forEach(function(input){
     });
 
 });
+
+// MANIPULACION DEL DOM //
+// Acción 1: Modificar el título
+
+titulo.textContent = titulo.textContent + " 💪";
+
+// Acción 2: Cambiar el color del título al pasar el mouse
+
+titulo.addEventListener("mouseover", function(){
+    titulo.style.color = "yellow";
+});
+
+titulo.addEventListener("mouseout", function(){
+    titulo.style.color = "white";
+});
