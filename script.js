@@ -182,3 +182,12 @@ comentario.addEventListener("input", contarCaracteres);
 inputs.forEach(function(input){
     input.addEventListener("input", cambiarColor);
 });
+
+// EVENTO CHANGE //
+
+inputs.forEach(function(input){
+    input.addEventListener("change", function(){
+        this.style.background = "#eef6ff";
+    });
+
+});
