@@ -168,3 +168,6 @@ formulario.addEventListener("submit", function(e){
     mostrarCantidad();
 });
 
+// EVENTO CLICK //
+
+botonConsejo.addEventListener("click", mostrarConsejo);
