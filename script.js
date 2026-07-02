@@ -60,9 +60,6 @@ estado.style.fontWeight = "bold";
 estado.style.marginTop = "10px";
 
 formulario.appendChild(estado);
-estado.textContent = "Formulario enviado correctamente.";
-
-estado.style.color = "green";
 
 
 // CONTADOR DE CARACTERES //
@@ -76,3 +73,55 @@ function contarCaracteres(){
 
 }
 comentario.addEventListener("input", contarCaracteres);
+
+// FUNCION: VALIDAR FORMULARIO //
+
+function validarFormulario(){
+
+    try{
+        for(let input of inputs){
+            if(input.value.trim() == ""){
+                throw new Error("Complete todos los campos.");
+            }
+
+        }
+
+        if(!validarEmail(inputs[2].value)){
+            throw new Error("Ingrese un email válido.");
+
+        }
+
+        if(comentario.value.trim() == ""){
+            throw new Error("Ingrese un comentario.");
+
+        }
+
+        formularios.push({
+            nombre: inputs[0].value,
+            apellido: inputs[1].value,
+            email: inputs[2].value,
+            comentario: comentario.value
+        });
+
+        estado.textContent = "Formulario enviado correctamente.";
+        estado.style.color = "green";
+        formulario.reset();
+        contador.textContent = "Caracteres: 0";
+        inputs.forEach(function(input){
+            input.style.border = "";
+            input.style.background = "";
+        });
+        comentario.style.border = "";
+    }
+
+    catch(error){
+        estado.textContent = error.message;
+        estado.style.color = "red";
+        alert(error.message);
+
+    }
+
+}
+
+
+
