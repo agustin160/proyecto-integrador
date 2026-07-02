@@ -130,7 +130,7 @@ function validarEmail(email){
 
 }
 
-// FUNCION 5: CAMBIAR COLOR //
+// FUNCION: CAMBIAR COLOR //
 
 function cambiarColor(){
     if(this.value.trim() == ""){
@@ -141,4 +141,30 @@ function cambiarColor(){
     }
 
 }
+
+// FUNCION: MOSTRAR CANTIDAD DE FORMULARIOS //
+
+function mostrarCantidad(){
+    const cantidad = document.querySelector("#cantidadFormularios");
+    if(cantidad){
+        cantidad.textContent = "Formularios enviados: " + formularios.length;
+    }
+
+    else{
+        const nuevo = document.createElement("p");
+        nuevo.id = "cantidadFormularios";
+        nuevo.style.fontWeight = "bold";
+        nuevo.textContent = "Formularios enviados: " + formularios.length;
+        formulario.appendChild(nuevo);
+    }
+
+}
+
+// EVENTO SUBMIT //
+
+formulario.addEventListener("submit", function(e){
+    e.preventDefault();
+    validarFormulario();
+    mostrarCantidad();
+});
 
