@@ -171,3 +171,14 @@ formulario.addEventListener("submit", function(e){
 // EVENTO CLICK //
 
 botonConsejo.addEventListener("click", mostrarConsejo);
+
+// EVENTO INPUT //
+
+comentario.addEventListener("input", contarCaracteres);
+
+
+// EVENTO INPUT PARA LOS CAMPOS //
+
+inputs.forEach(function(input){
+    input.addEventListener("input", cambiarColor);
+});
