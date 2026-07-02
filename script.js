@@ -120,8 +120,25 @@ function validarFormulario(){
         alert(error.message);
 
     }
+}
+
+// FUNCION: VALIDAR EMAIL //
+
+function validarEmail(email){
+
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 }
 
+// FUNCION 5: CAMBIAR COLOR //
 
+function cambiarColor(){
+    if(this.value.trim() == ""){
+        this.style.border = "2px solid red";
+    }
+    else{
+        this.style.border = "2px solid green";
+    }
+
+}
 
